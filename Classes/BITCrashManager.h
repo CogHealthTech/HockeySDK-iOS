@@ -33,10 +33,10 @@
 #import "BITHockeyBaseManager.h"
 
 // We need this check depending on integrating as a subproject or using the binary distribution
-#if __has_include("CrashReporter.h")
-#import "CrashReporter.h"
-#else
+#if __has_include(<CrashReporter/CrashReporter.h>)
 #import <CrashReporter/CrashReporter.h>
+#else
+#import "CrashReporter.h"
 #endif
 
 
